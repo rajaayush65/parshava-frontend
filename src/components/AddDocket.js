@@ -29,7 +29,6 @@ const AddDocket = ({ docket, setDocket }) => {
         });
     }
     if (id === "purchaseOrder") {
-      console.log(value);
       setDocket((prevDocket) => {
         return {
           ...prevDocket,

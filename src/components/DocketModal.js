@@ -22,7 +22,16 @@ const DocketModal = ({ show, handleClose, setIsNewOrderAdded }) => {
         .then((res) => {
           console.log(res.data.data);
           window.alert("Added Successfully");
-          setIsNewOrderAdded(true)
+          setIsNewOrderAdded(true);
+          setDocket({
+            name: "",
+            startDate: "",
+            endDate: "",
+            hoursWorked: "",
+            ratePerHour: "",
+            supplierName: "",
+            purchaseOrder: "",
+          });
           handleClose();
         })
         .catch((err) => {
@@ -49,7 +58,7 @@ const DocketModal = ({ show, handleClose, setIsNewOrderAdded }) => {
           Close
         </Button>
         <Button variant="primary" onClick={addOrder}>
-          Add Docket
+          Add Order
         </Button>
       </Modal.Footer>
     </Modal>
